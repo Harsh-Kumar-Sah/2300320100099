@@ -7,17 +7,31 @@ Caches the JWT token and refreshes it automatically when expired.
 
 import time
 import requests
+import os
+from dotenv import load_dotenv
+
+# Automatically finds and reads the .env file
+load_dotenv()
+
+# Pull individual settings into variables
+email = os.getenv("EMAIL")
+name = os.getenv("NAME")
+rollNo = os.getenv("ROLLNO")
+accessCode = os.getenv("ACCESSCODE")
+clientID = os.getenv("CLIENTID")
+clientSecret = os.getenv("CLIENTSECRET")
+
 
 # =============================================================================
 # CREDENTIALS — FILL IN YOUR DETAILS BELOW
 # =============================================================================
 CREDENTIALS = {
-    "email": "harshkr775@gmail.com",
-    "name": "Harsh Kumar Sah",
-    "rollNo": "2300320100099",
-    "accessCode": "cXuqht",
-    "clientID": "b07333f2-6bcf-4736-9cdd-16c8c5f75940",
-    "clientSecret": "ZEZMSbVVmxMfWPqK",
+    "email": email,
+    "name": name,
+    "rollNo": rollNo,
+    "accessCode": accessCode,
+    "clientID": clientID,
+    "clientSecret": clientSecret,
 }
 
 # =============================================================================
